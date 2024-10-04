@@ -2,7 +2,7 @@ const http = require('node:http');
 
 const server = http.createServer();
 
-server.listen(8050, () => {
+server.listen(8051, () => {
   console.log('Server listening on http://localhost:8050');
 });
 
@@ -16,9 +16,6 @@ server.on('request', (request, response) => {
   
   console.log('\n-------- HEADERS --------');
   console.log(request.headers);
-  
-  // console.log('-------- BODY --------');
-  // console.log(request.body); // Loads body into memory, not efficient
   
   const name = request.headers.name;
   let data = '';

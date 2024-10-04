@@ -5,17 +5,17 @@ const client = new http.Agent({keepAlive: true});
 const request = http.request({
   agent: client,
   hostname: 'localhost',
-  port: 8050,
+  port: 8051,
   method: 'POST',
   path: '/create-post',
   headers: {
-    'Content-Type': 'application/json', // 'Content-Length': Buffer.byteLength(res1, 'utf-8') +
+    'Content-Type': 'application/json',
+    // 'Content-Length': Buffer.byteLength(res1, 'utf-8') +
     //     Buffer.byteLength(res2, 'utf-8'),
     'Transfer-Encoding': 'chunked', 'name': 'authorizedUser',
   },
 });
 
-let responseData = '';
 // This event is emitted only once
 request.on('response', response => {
   console.log('\n-------- STATUS --------');
