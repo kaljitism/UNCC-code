@@ -3,7 +3,7 @@ const http = require('node:http');
 const server = http.createServer();
 
 server.listen(8051, () => {
-  console.log('Server listening on http://localhost:8050');
+  console.log('Server listening on http://localhost:8051');
 });
 
 server.on('request', (request, response) => {
