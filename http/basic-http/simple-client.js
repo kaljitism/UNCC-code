@@ -25,8 +25,9 @@ request.on('response', response => {
   console.log(response.headers);
   
   console.log('\n-------- BODY --------');
-  response.on('data', chunk => {
-    console.log(chunk.toString());
+  response.on('data', (chunk) => {
+    // console.log(chunk.toString('hex'));
+    console.log(chunk.toString('utf8'));
   });
   
   response.on('end', () => {
